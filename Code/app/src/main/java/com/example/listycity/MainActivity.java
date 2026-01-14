@@ -87,9 +87,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Stylizing user input
         int paddingInDp = 20;
-        float scale = getResources().getDisplayMetrics().density;
-        int paddingInPx = (int) (paddingInDp * scale + 0.5f);
-        input.setPadding(paddingInPx, paddingInPx, paddingInPx, paddingInPx);
+        float scale = getResources().getDisplayMetrics().density; // scale = density of the screen
+        int paddingInPx = (int) (paddingInDp * scale + 0.5f); // Converts dp to px
+        input.setPadding(paddingInPx, paddingInPx, paddingInPx, paddingInPx); // Pads all 4 sides
+                                                                              // the input field
 
         builder.setView(input);
 

@@ -7,34 +7,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Implementing the title bar-->
+    <TextView
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:text="ListyCity - Eypan Mercado Lab 2"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:padding="16dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- ListView code from demo, modified to fit with the title bar -->
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/title_bar"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
     </ListView>
 
+    <!-- Implementation of the 'Add City' button -->
     <Button
         android:id="@+id/add_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Add City"
+        android:backgroundTint="#212121"
+        android:textColor="#FFFFFF"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/delete_button"
         app:layout_constraintWidth_percent="0.5"/>
 
+    <!-- Implementation of the 'DeleteCity' button -->
     <Button
         android:id="@+id/delete_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Delete City"
+        android:backgroundTint="#212121"
+        android:textColor="#FFFFFF"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/add_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.5"/>
-
-    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
